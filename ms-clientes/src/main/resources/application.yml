@@ -1,0 +1,20 @@
+server:
+  application:
+    name: clientes-api
+
+management:
+  endpoints:
+    web:
+      enabled-by-defalt: false
+      exposure:
+        #include: 'health,metrics,prometheus'
+        include: 'health,prometheus'
+
+  endpoint:
+    health:
+      enabled: true
+    #metrics:
+    #  enabled: true
+    prometheus:
+      enabled: true
+
